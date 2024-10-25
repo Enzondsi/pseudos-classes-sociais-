@@ -1,0 +1,143 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px;
+    padding: 0;
+    animation-duration: 3s;
+    animation-name: deslizedoPP;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h1::before {
+    content: "Tema:       ";
+    color: aqua;
+    box-shadow: 1px 1px 1px 1px crimson;
+    padding-right: 8px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    margin: 0 10px; 
+    padding-top: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    transition-duration: 0.9s;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 247, 255);
+    border: 3px solid;
+    border-style: dotted;
+    border-radius: 4px;
+}
+
+nav ul li a:active {
+    background-color: rgb(255, 255, 255);
+}
+
+nav ul li a:visited {
+    color: rgb(0, 255, 238);
+}
+
+p::first-letter {
+    color: aqua;
+    font-size: 2em;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+@keyframes deslizedoPP {
+    from {
+        margin-top: 100%;
+        width: 300%;
+    }
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
+}
+
+img {
+    height: auto; 
+    width: 100%; 
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto; 
+}
+
+p {
+    font-size: 1.4em;
+}
+
+#alta:hover,
+#Media:hover,
+#Baixa:hover {
+    box-shadow: 10px 10px 10px 10px white;
+    transition-duration: 1s;
+    transform: translateY(-3px);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.9em;
+    padding-top: 40px;
+}
+
+
+@media (max-width: 768px) { 
+    h1 {
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        margin: 0 5px; 
+
+    p {
+        font-size: 1.2em; 
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+}
+
+@media (max-width: 480px) { 
+    h1 {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column; 
+    }
+
+    img {
+        height: 150px; 
+        width: auto; 
+    }
+
+    p {
+        font-size: 1em; 
+    }
+
+    #alta, #Media, #Baixa {
+        margin-bottom: 20px;
+    }
+}}
